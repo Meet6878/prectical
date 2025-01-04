@@ -5,7 +5,8 @@ import BlogListPage from "./Pages/BlogListPage";
 import ErrorPage from "./Pages/ErrorPage";
 import NavBar from "./components/NavBar";
 import SingleBlogPage from "./Pages/SingleBlogPage";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
+import { RagisterForm } from "./components/RagisterForm";
 function App() {
   return (
     <>
@@ -15,6 +16,8 @@ function App() {
         <Route path="/" element={<BlogListPage />} />
         <Route path="/get-blog" element={<BlogListPage />} />
         <Route path="/get-blog/:id" element={<SingleBlogPage />} />
+        <Route path="/register" element={<RagisterForm />} />
+
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

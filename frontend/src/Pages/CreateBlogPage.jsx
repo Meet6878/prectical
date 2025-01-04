@@ -26,9 +26,9 @@ const CreateBlogPage = () => {
 
   const { title, description, category, status } = formData;
 
-  const handleChange = (e) =>
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-
+  };
   const onCategoryChange = (selectedOption) => {
     setFormData({ ...formData, category: selectedOption.value });
   };
