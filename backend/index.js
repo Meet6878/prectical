@@ -4,6 +4,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const DBcon = require("./DataBaseConnect/DBcon");
 const BlogRoute = require("./routes/BlogRoute");
+const UserRouter = require("./routes/UserRoute");
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 app.use("/api/v1/blog", BlogRoute);
+app.use("/api/v2/Auth", UserRouter);
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
