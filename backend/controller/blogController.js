@@ -1,6 +1,7 @@
 const BlogModel = require("../model/BlogModel");
 
 const CreateBlog = async (req, res) => {
+  console.log("req.body", req.body);
   try {
     const { title, description, category, status } = req.body;
     if (!title || !description || !category || !status) {
