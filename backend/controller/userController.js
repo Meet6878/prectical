@@ -100,7 +100,6 @@ const Login = async (req, res) => {
   }
 };
 
-module.exports = { Login };
 
 const GetUser = async (req, res) => {
   try {
